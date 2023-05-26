@@ -1,0 +1,56 @@
+h1 {
+	font-size: 30px;
+	background-color: rgba(44, 175, 251, 0.421);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  button {
+	margin-top: 20px;
+	font-size: 18px;
+	padding: 10px 20px;
+	border-color: black;
+	background-color: #2489e8;
+	color: #fff;
+	border-radius: 2px;
+	cursor: pointer;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+	background-color: #0f3c5d;
+	border-radius: 25px;
+  }
+  
+  h2.wino {
+	font-size: 50px;
+	margin-top: 20px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background-color: #6198ff;
+  }
+  
+  h2.winx {
+	font-size: 50px;
+	margin-top: 20px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	background-color: hsl(0, 100%, 65%); 
+  }
+  
+  main {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	margin-top: 20px;
+  }
+  
+  app-square {
+	border: 1px solid grey;
+	height: 200px;
+	border-radius: 10px;
+  }
+  app-square:hover {
+	border-radius: 15px;
+	border: 1px solid rgb(35, 30, 51);
+	height: 200px;
+  }
+  
