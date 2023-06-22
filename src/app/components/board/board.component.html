@@ -1,13 +1,34 @@
-<h1>Current Player : {{player}} </h1>
-<button (click)="newGame()">Start a New Game !!</button>
-<h2 class="winx" *ngIf= "winner == 'X'" >Winner is : {{winner}}</h2>
-<h2 class="wino" *ngIf= "winner == 'O'" >Winner is: {{winner}}</h2>
+<!-- <div class="overlay"> -->
 
-<main>
-	<app-square 
-	*ngFor="let x of squares; let i = index"
-	[value] = "x"
-	(click) = "makemove(i)"></app-square>
+	<div class="other" *ngIf="winnerde != false">
+		<button (click)="newGame()" class="newgame-winner-x" *ngIf= "winner == 'X'">Winner is : {{winner}} <br><br> Click to Start <br> New Game</button>
+		<button (click)="newGame()" class="newgame-winner-o" *ngIf= "winner == 'O'">Winner is : {{winner}} <br><br> Click to Start <br>New Game</button>
+	</div>
+	
+	<div *ngIf="winnerde != true">
+		<h1 class="head">o<span style="color:#F2B137;">x</span></h1>
+	<h1 class="playx" *ngIf= "player == 'X'">Current Player : {{player}} </h1>
+	<h1 class="playo" *ngIf= "player == 'O'">Current Player : {{player}} </h1>
+
+
+	<h2 class="winx" *ngIf= "winner == 'X'" >Winner is : {{winner}}</h2>
+	<h2 class="wino" *ngIf= "winner == 'O'" >Winner is: {{winner}}</h2>
+	
+	<main>
+		<app-square 
+		*ngFor="let x of squares; let i = index"
+		[value] = "x"
+		(click) = "makemove(i)"></app-square>
+		
+	
+	</main>
+	
+	<!-- <div *ngIf="winnerde != true"> -->
+		<button (click)="newGame()" class="newgame">New Game</button>
+	<!-- </div> -->
 	
 
-</main>
+	</div>
+
+
+<!-- </div> -->

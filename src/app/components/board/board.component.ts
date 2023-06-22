@@ -9,6 +9,7 @@ export class BoardComponent {
   squares! : any[];
   xisNext! : boolean;
   winner! : string;
+  winnerde ! : boolean;
 
   constructor(){}
 
@@ -20,6 +21,7 @@ export class BoardComponent {
     this.squares = Array(9).fill(null);
     this.xisNext = true;
     this.winner = '';
+    this.winnerde = false;
   }
 
   get player(){
@@ -53,10 +55,14 @@ export class BoardComponent {
         this.squares[a] === this.squares[b] &&
         this.squares[a] === this.squares[c]
       ) {
+        this.winnerde = true;
         return this.squares[a];
       }
     }
     return null;
+
   }
+
+  
 
 }
